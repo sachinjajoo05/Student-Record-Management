@@ -44,6 +44,7 @@ void Student::showData()
  cout<<endl;
 }
 
+/****************Function to add Data*************/
 void addData()
 {
  ofstream fout;
@@ -54,6 +55,7 @@ void addData()
  cout<<"\n\nData Successfully Saved to File....\n";
 }
 
+/***************Function to display Data**************/
 void displayData()
 {
  ifstream fin;
@@ -66,6 +68,7 @@ void displayData()
  cout<<"\n\nData Reading from File Successfully Done....\n";
 }
 
+/**************Function to search data**************/
 void searchData()
 {
  int n, flag=0;
@@ -89,6 +92,7 @@ void searchData()
  cout<<"\n\nData Reading from File Successfully Done....\n";
 }
 
+/***************Function to delete Data**************/
 void deleteData()
 {
  int n, flag=0;
@@ -98,10 +102,6 @@ void deleteData()
  fin.open("Students.dat",ios::in|ios::binary);
  fout.open("TempStud.dat",ios::out|ios::app|ios::binary);
  tout.open("TrashStud.dat",ios::out|ios::app|ios::binary);
-
- 
-
-
  cout<<"Enter Admission Number you want to move to Trash : ";
  cin>>n;
  
@@ -128,6 +128,7 @@ void deleteData()
  rename("tempStud.dat","Students.dat");
 }
 
+/**************Function to read data in trash file****************/
 void getTrash()
 {
  ifstream fin;
@@ -140,6 +141,7 @@ void getTrash()
  cout<<"\n\nData Reading from Trash File Successfully Done....\n";
 }
 
+/*************Function to modify data****************/
 void modifyData()
 {
  int n, flag=0, pos;
@@ -201,7 +203,9 @@ void project()
  }while(ch);
 }
 
+/************Main Function**************/
 int main()
 {
  project();
 }
+/*****************PROGRAM ENDS**************/
